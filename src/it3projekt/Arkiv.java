@@ -15,10 +15,8 @@ public class Arkiv {
 
     private Connection conn;
     private Statement stmt;
-    private PreparedStatement stmt2;
     private ResultSet rset;
     private String patient;
-    private String indkald;
 
     public Arkiv() {
          /*try {

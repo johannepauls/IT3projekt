@@ -21,9 +21,8 @@ public class Controller {
     private static Arkiv arkiv = new Arkiv();
     private static KalenderPanel kalenderPanel = new KalenderPanel();
     private static PatientPanel patientPanel = new PatientPanel(card, panelHolder);
-    private static JournalPanel journalPanel = new JournalPanel(card, panelHolder,arkiv);
+    private static JournalPanel journalPanel = new JournalPanel(card, panelHolder);
     private static SogPanel sogPanel = new SogPanel(patientPanel, arkiv, card, panelHolder);
-     
     
 
     public static void main(String[] args) {

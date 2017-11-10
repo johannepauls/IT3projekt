@@ -16,7 +16,7 @@ public class JournalPanel extends javax.swing.JPanel {
     private CardLayout card;
     private JPanel panelHolder;
 
-    public JournalPanel(CardLayout c, JPanel p, Arkiv a) {
+    public JournalPanel(CardLayout c, JPanel p) {
         initComponents();
         card=c;
         panelHolder = p;

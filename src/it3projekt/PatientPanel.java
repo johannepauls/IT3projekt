@@ -39,7 +39,7 @@ public class PatientPanel extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        journalTable = new javax.swing.JTable();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,7 +111,7 @@ public class PatientPanel extends javax.swing.JPanel {
         jTable2.setTableHeader(null);
         jScrollPane4.setViewportView(jTable2);
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        journalTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"PTSD", "20/09-1945",  new Boolean(true), "Dr. Gert Gås"},
                 {"IED", "14/05-1980",  new Boolean(true), "Dr. Gert Gås"},
@@ -129,14 +129,14 @@ public class PatientPanel extends javax.swing.JPanel {
                 return types [columnIndex];
             }
         });
-        jTable4.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jTable4.setGridColor(new java.awt.Color(255, 255, 255));
-        jTable4.addMouseListener(new java.awt.event.MouseAdapter() {
+        journalTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        journalTable.setGridColor(new java.awt.Color(255, 255, 255));
+        journalTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable4MouseClicked(evt);
+                journalTableMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(jTable4);
+        jScrollPane2.setViewportView(journalTable);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -167,15 +167,14 @@ public class PatientPanel extends javax.swing.JPanel {
         card.show(panelHolder, "kalenderPanel");
     }//GEN-LAST:event_tilbageKnapActionPerformed
 
-    private void jTable4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseClicked
+    private void journalTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_journalTableMouseClicked
         card.show(panelHolder, "journalPanel");
-    }//GEN-LAST:event_jTable4MouseClicked
+    }//GEN-LAST:event_journalTableMouseClicked
 
     public void findPatient(String p){
         String patient=p; 
         System.out.println(patient);
-       /* //denne kode virker i teorien, når arkiv
-        arkiv.
+       /* //denne kode virker i teorien, når arkiv afstemt:)
         String navn = patient.substring(0, patient.indexOf("&")-1);
         patient = patient.substring(patient.indexOf("&")+1);
         String cpr=patient.substring(0, patient.indexOf("&")-1);
@@ -218,7 +217,7 @@ public class PatientPanel extends javax.swing.JPanel {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
+    private javax.swing.JTable journalTable;
     private javax.swing.JButton tilbageKnap;
     // End of variables declaration//GEN-END:variables
 }

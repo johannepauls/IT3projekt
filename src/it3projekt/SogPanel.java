@@ -16,12 +16,12 @@ import javax.swing.*;
 public class SogPanel extends JPanel{
     private GridBagLayout gb = new GridBagLayout();
     private CardLayout card;
-    private String cpr;
     private JPanel panelHolder;
     private PatientPanel patientP; 
     private Arkiv arkiv;
     private String patient;
-
+    private String cpr;
+    
     public SogPanel(PatientPanel pp, Arkiv a, CardLayout c, JPanel p){
         initComponents();
         card=c;
